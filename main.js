@@ -6,8 +6,38 @@
 - Demonstrate how functions serve as a “black box” in the context of larger programs
 */
 
+// function greet(){
+//   console.log('Hi')
+// }
+
+let greet = (firstName, lastName) => {
+  if(firstName && lastName) {
+    return `Hi ${firstName} ${lastName}`
+  }
+  else if(firstName) {
+    return `Hi ${firstName}`
+  }
+  else {
+    return 'Hi!'
+  }
+}
+
+// for(let i = 0; i < 5; i++) {
+//   greet()
+// }
+
 let nameA = 'Susan'
-console.log(`Hi ${nameA}`)
+let lastName = 'Johnson'
 
 let nameB = 'Jason'
-console.log(`Hi ${nameB}`)
+
+let greetings = [greet(nameA, lastName), greet(nameB, lastName)]
+debugger
+
+let sum = (firstNum, secondNum) => {
+  return firstNum + secondNum
+}
+
+console.log(sum(3,4)) // => 7
+
+console.log(sum(5, 5)) // => 10
